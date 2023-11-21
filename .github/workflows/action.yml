@@ -1,0 +1,44 @@
+# This is a basic workflow to generate build
+name: "Generate App Builds"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+on:
+  push:
+    branches:
+      - 'master'
+      - 'main'
+      - 'develop'
+
+  pull_request:
+    branches:
+      - '*'
+      - '*/*'
+      - '**'
+
+  workflow_dispatch:
+
+jobs:
+  pre-release:
+    name: "Build and App-Inspect"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: VatsalJagani/splunk-app-action@v2
+        with:
+          app_dir: "A-TA-windows_inputs"
+          is_app_inspect_check: false
+
+      - uses: VatsalJagani/splunk-app-action@v2
+        with:
+          app_dir: "A-TA-ad_inputs"
+          is_app_inspect_check: false
+
+      - uses: VatsalJagani/splunk-app-action@v2
+        with:
+          app_dir: "A-TA-dns_inputs"
+          is_app_inspect_check: false
+
+      - uses: VatsalJagani/splunk-app-action@v2
+        with:
+          app_dir: "A-TA-dhcp_inputs"
+          is_app_inspect_check: false
