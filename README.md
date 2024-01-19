@@ -20,11 +20,8 @@ This repository contains various input apps for Windows and Linux as listed belo
 
 ## Linux Input Apps:
 
-* A-TA-cyences_inputs
-    * Addon Dependency: TA-cyences
-    * Required Indexes: os
-* A-TA-nix_inputs
-    * Addon Dependency: Splunk_TA_nix
+* A-TA-linux_inputs
+    * Addon Dependency: Splunk_TA_nix, TA-cyences
     * Required Indexes: os
 
 
