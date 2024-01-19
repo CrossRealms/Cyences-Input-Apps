@@ -13,7 +13,7 @@ This repository contains various input apps for Windows and Linux as listed belo
 * A-TA-dns_inputs
     * Addon Dependency: Splunk_TA_windows
     * Required Indexes: dns
-* A-TA-nix_inputs
+* A-TA-windows_inputs
     * Addon Dependency: Splunk_TA_windows
     * Required Indexes: wineventlog, windows
 
