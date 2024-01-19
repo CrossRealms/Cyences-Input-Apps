@@ -1,16 +1,32 @@
-# Windows-Input-Apps
-Inputs App for Windows to create various types of inputs like AD specific, DNS specific, DHCP specific and generic
+# Cyences-Input-Apps
+
+This repository contains various input apps for Windows and Linux as listed below.
+
+## Windows Input Apps:
+
+* A-TA-ad_inputs
+    * Addon Dependency: Splunk_TA_windows
+    * Required Indexes: wineventlog, msad
+* A-TA-dhcp_inputs
+    * Addon Dependency: Splunk_TA_windows
+    * Required Indexes: dhcp
+* A-TA-dns_inputs
+    * Addon Dependency: Splunk_TA_windows
+    * Required Indexes: dns
+* A-TA-windows_inputs
+    * Addon Dependency: Splunk_TA_windows
+    * Required Indexes: wineventlog, windows
 
 
-* All of the Apps here has Splunk_TA_windows Add-on as dependency, meaning it has to be deployed along side any of these Apps.
+## Linux Input Apps:
+
+* A-TA-linux_inputs
+    * Addon Dependency: Splunk_TA_nix, TA-cyences
+    * Required Indexes: os
+
+
+**NOTES:**
+
+* Ensure you look for the **Addon Dependency** and **Required Indexes** for each apps, meaning those apps and indexes has to be deployed before deploying these input apps.
 
 * Ensure you look for `TODO` items inside `inputs.conf` before deploying to the environment.
-
-* `A-TA-ad_inputs` only collects AD specific data, which means to collect the generic windows data you also have to deploy `A-TA-windows_inputs` app. And so on for other apps.
-
-* Following indexes are required for these Apps. (dns and dhcp index are only require if you are deploying those Apps)
-    * windows
-    * wineventlog
-    * msad
-    * dns
-    * dhcp
