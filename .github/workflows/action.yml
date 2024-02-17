@@ -23,22 +23,27 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - uses: VatsalJagani/splunk-app-action@v2
+      - uses: VatsalJagani/splunk-app-action@v2.8
         with:
           app_dir: "A-TA-windows_inputs"
           is_app_inspect_check: false
 
-      - uses: VatsalJagani/splunk-app-action@v2
+      - uses: VatsalJagani/splunk-app-action@v2.8
         with:
           app_dir: "A-TA-ad_inputs"
           is_app_inspect_check: false
 
-      - uses: VatsalJagani/splunk-app-action@v2
+      - uses: VatsalJagani/splunk-app-action@v2.8
         with:
           app_dir: "A-TA-dns_inputs"
           is_app_inspect_check: false
 
-      - uses: VatsalJagani/splunk-app-action@v2
+      - uses: VatsalJagani/splunk-app-action@v2.8
         with:
           app_dir: "A-TA-dhcp_inputs"
+          is_app_inspect_check: false
+
+      - uses: VatsalJagani/splunk-app-action@v2.8
+        with:
+          app_dir: "A-TA-linux_inputs"
           is_app_inspect_check: false
