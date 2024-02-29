@@ -35,6 +35,11 @@ jobs:
 
       - uses: VatsalJagani/splunk-app-action@v3
         with:
+          app_dir: "A-TA-ad_admon_input"
+          is_app_inspect_check: false
+
+      - uses: VatsalJagani/splunk-app-action@v3
+        with:
           app_dir: "A-TA-dns_inputs"
           is_app_inspect_check: false
 
