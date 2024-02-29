@@ -7,6 +7,10 @@ This repository contains various input apps for Windows and Linux as listed belo
 * A-TA-ad_inputs
     * Addon Dependency: Splunk_TA_windows
     * Required Indexes: wineventlog, msad
+* A-TA-ad_admon_input
+    * Addon Dependency: Splunk_TA_windows
+    * Required Indexes: msad
+    * **NOTE:** Deploy this app to only one AD client because deploying it to all AD clients will duplicate the data. 
 * A-TA-dhcp_inputs
     * Addon Dependency: Splunk_TA_windows
     * Required Indexes: dhcp
